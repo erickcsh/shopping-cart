@@ -1,24 +1,31 @@
-# README
+# Shopping Cart
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dev test project for shopping cart API.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+Make sure you have docker and docker-compose installed.
 
-* System dependencies
+1. Build the project: `docker-compose build`
+2. Start the server: `docker-compose up`
+3. Setup the database `docker-compose run web rails db:create db:migrate db:seed`
+4. Server is up and ready. Next time you need to start up the server, you only need to run step 2
 
-* Configuration
 
-* Database creation
+## Test
 
-* Database initialization
+To run tests execute: `docker-compose run web rspec spec`
 
-* How to run the test suite
+## Example curls
 
-* Services (job queues, cache servers, search engines, etc.)
+### List items for sale
 
-* Deployment instructions
+### List a new item
 
-* ...
+### Unlist an item
+
+### Add item to cart
+
+### Remove item from cart
+
+### View user's cart
