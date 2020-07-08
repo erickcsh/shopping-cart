@@ -1,11 +1,19 @@
 
 AllCops:
-  Includes:
-    - Rakefile
-    - config.ru
   Excludes:
     - db/**
     - config/**
     - script/**
-  Documentation:
-    Enabled: false
+    - bin/**
+    - node_modules/**/**
+    - lib/tasks/**
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/**
